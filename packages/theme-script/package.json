@@ -1,0 +1,34 @@
+{
+  "name": "geolocationtools-script",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && npm run build:es5 && npm run build:minify && node bundle.cjs",
+    "build:es5": "tsc dist/assets/index.js --allowJs --outfile dist/assets/index.tmp.js --target es5",
+    "build:minify": "uglifyjs dist/assets/index.tmp.js --compress --mangle -o dist/assets/index.js",
+    "format": "prettier --write .",
+    "lint": "eslint --ext .js,.ts,.tsx ./src",
+    "lint:fix": "eslint --fix --ext .js,.ts,.tsx ./src",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "json5": "^2.2.3",
+    "less": "^4.2.0",
+    "prettier": "^3.1.1",
+    "typescript": "^5.2.2",
+    "uglify-js": "^3.17.4",
+    "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "fetch-with-json": "^1.0.0",
+    "with-classname-prefix": "^2.0.0",
+    "x-byte-js": "0.0.1-alpha.2"
+  }
+}

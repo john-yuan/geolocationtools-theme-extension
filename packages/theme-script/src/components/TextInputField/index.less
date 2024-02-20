@@ -1,0 +1,32 @@
+.geolocationtools__Container {
+  .geolocationtools__TextInputField {
+    max-width: 320px;
+    margin: 16px 0;
+
+    &-label {
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      margin-bottom: 4px;
+    }
+
+    &-input {
+      border: 1px solid #000;
+      width: 100%;
+      box-sizing: border-box;
+      height: 40px;
+      line-height: 1;
+      padding: 0 12px;
+      font-size: 14px;
+      outline-offset: -2px;
+      outline: 0 solid rgba(0, 0, 0, 0);
+      transition:
+        outline-width 0.24s ease-in,
+        outline-color 0.24s ease-in;
+
+      &:focus {
+        outline: 5px solid rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}

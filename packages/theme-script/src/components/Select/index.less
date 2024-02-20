@@ -1,0 +1,235 @@
+.geolocationtools__Container {
+  .geolocationtools__Select {
+    position: relative;
+    margin: 1em 0;
+    height: 40px;
+    border: 1px solid #333;
+    box-sizing: border-box;
+
+    &:hover {
+      border-color: #000;
+    }
+
+    &-selected {
+      background: #fff;
+      color: #000;
+      font-size: 14px;
+      line-height: 38px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      padding: 0 14px;
+      font-weight: 500;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+      height: 38px;
+    }
+
+    &-caret {
+      pointer-events: none;
+      z-index: 2;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      right: 10px;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        color: #333;
+        transform: rotate(0deg);
+        width: 20px;
+        height: 20px;
+      }
+
+      &[data-open='true'] {
+        svg {
+          color: #000;
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &-overlay-wrapper {
+      display: none;
+      position: absolute;
+      left: -1px;
+      right: -1px;
+      top: 100%;
+      padding-top: 6px;
+      padding-bottom: 14px;
+    }
+
+    &-options,
+    &-option {
+      display: block;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    &-overlay {
+      background: #fff;
+      border: 1px solid #000;
+      font-size: 14px;
+    }
+
+    &-input-wrapper {
+      padding: 10px 14px;
+      position: relative;
+
+      input {
+        box-sizing: border-box;
+        padding-left: 24px;
+        padding-right: 8px;
+        width: 100%;
+        height: 36px;
+        line-height: 1;
+        border: 0;
+        border-bottom: 1px solid #d9d9d9;
+        outline: none;
+        font-size: 14px;
+        transition: border-bottom-color 240ms ease-in-out;
+        box-shadow: unset;
+        background-color: inherit;
+
+        &:focus {
+          box-shadow: unset;
+          border-bottom-color: #000;
+          background-color: inherit;
+        }
+      }
+    }
+
+    &-icon-search {
+      position: absolute;
+      display: block;
+      width: 16px;
+      height: 16px;
+      top: 19px;
+      left: 14px;
+      color: #888;
+
+      svg {
+        display: block;
+        width: 16px;
+        height: 16px;
+      }
+
+      &[data-active='true'] {
+        color: #333;
+      }
+    }
+
+    &-options {
+      max-height: 160px;
+      overflow: auto;
+    }
+
+    &-option {
+      padding: 10px 14px;
+      cursor: pointer;
+      line-height: 22px;
+
+      &[data-active='true'] {
+        font-weight: bold;
+        color: #000;
+        background: #eee;
+      }
+
+      &-hover {
+        background: #e5e5e5;
+        color: #000;
+
+        &[data-active='true'] {
+          background: #e5e5e5;
+        }
+      }
+    }
+
+    &-empty {
+      padding: 10px 14px;
+      padding-top: 0;
+      color: #333;
+    }
+  }
+}
+
+.geolocationtools__Container-dark {
+  .geolocationtools__Select {
+    border-color: #ddd;
+
+    &:hover {
+      border-color: #fff;
+    }
+
+    &-selected {
+      background: #000;
+      color: #fff;
+    }
+
+    &-caret {
+      svg {
+        color: #ddd;
+      }
+
+      &[data-open='true'] {
+        svg {
+          color: #fff;
+        }
+      }
+    }
+
+    &-overlay {
+      background: #000;
+      border-color: #ddd;
+    }
+
+    &-input-wrapper {
+      input {
+        border-bottom-color: #999;
+        color: #fff;
+
+        &::placeholder {
+          color: #999;
+        }
+
+        &:focus {
+          border-bottom-color: #ccc;
+        }
+      }
+    }
+
+    &-icon-search {
+      color: #999;
+
+      &[data-active='true'] {
+        color: #eee;
+      }
+    }
+
+    &-option {
+      color: #eee;
+
+      &[data-active='true'] {
+        color: #fff;
+        background: #222;
+      }
+
+      &-hover {
+        background: #333;
+        color: #fff;
+        &[data-active='true'] {
+          background: #333;
+        }
+      }
+    }
+
+    &-empty {
+      color: #fff;
+    }
+  }
+}

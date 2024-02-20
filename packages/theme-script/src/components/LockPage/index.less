@@ -1,0 +1,73 @@
+.geolocationtools__Container {
+  .geolocationtools__LockPage {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background: #f3f5f8;
+    overflow: auto;
+
+    &-message {
+      margin: 16px;
+
+      h1,
+      p {
+        display: block;
+        color: #000;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-shadow: unset;
+        line-height: 1.5;
+      }
+
+      h1 {
+        font-size: 32px;
+        font-weight: bold;
+      }
+
+      p {
+        color: #333;
+        font-size: 16px;
+        font-weight: normal;
+        margin-top: 16px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &-form {
+      margin: 16px;
+    }
+
+    &-error {
+      color: red;
+      margin: 16px 0;
+    }
+
+    &-btn-submit {
+      height: 40px;
+      line-height: 40px;
+      padding: 0 1.5em;
+      font-size: 14px;
+      background: #ffdf33;
+      color: #000;
+      display: inline-block;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+
+      &:hover {
+        background: #ffd700;
+      }
+
+      &:active {
+        opacity: 0.8;
+      }
+    }
+  }
+}

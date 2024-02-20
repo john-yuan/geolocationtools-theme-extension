@@ -1,0 +1,18 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "7f8bbcfd98b80ef5bd7e98c8295922e9"
+name = "Dev Geolocation Tools"
+application_url = "http://localhost:8088/shopify/app"
+embedded = true
+
+[build]
+dev_store_url = "quickstart-e3504e51.myshopify.com"
+
+[auth]
+redirect_urls = [ "http://localhost:8088/shopify/app" ]
+
+[webhooks]
+api_version = "2024-01"
+
+[pos]
+embedded = false

@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "scripts": {
+    "dev:script": "cd packages/theme-script && pnpm dev"
+  }
+}
