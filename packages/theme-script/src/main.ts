@@ -20,6 +20,10 @@ function start() {
       encodedAccount,
       encodedPassword
     }).then((stat) => {
+      if (!(stat.locked || (stat.code && stat.redirect_settings))) {
+        return
+      }
+
       let mode = 'light'
 
       if (mode === 'auto') {
@@ -44,7 +48,7 @@ function start() {
               password,
               onSubmit: (account, password) => {
                 setStorage({ account, password })
-                window.location.reload()
+                location.reload()
               }
             })
           } else if (stat.code && stat.redirect_settings) {

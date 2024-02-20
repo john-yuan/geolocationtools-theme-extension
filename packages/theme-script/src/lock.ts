@@ -45,7 +45,7 @@ export function renderLockPage({
         })
       )
     } else if (stat.lock_strategy === 3) {
-      window.location.href = 'about:blank'
+      location.href = 'about:blank'
     } else {
       loginFormDisplayed = stat.lock_strategy === 2
       rootNode = render(
